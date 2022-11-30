@@ -48,16 +48,16 @@
               <input type="text" id="search-chat" placeholder="      Cerca o inizia una nuova chat">
             </div>
             <!-- lista contatti -->
-            <div class="contatto">
+            <div class="contatto" v-for="element in contacts">
               <div class="img-profilo">
-                <img src="imgs/avatar_3.jpg" class="img-avatar2">
+                <img :src="element.avatar" class="img-avatar2">
               </div>
               <div class="utente">
                 <div class="nome">
-                  Luca
+                  {{element.name}}
                 </div>
                 <div class="messaggio">
-                  Ciao
+                  {{element.messages[1].message}}
                 </div>
               </div>
             </div>
