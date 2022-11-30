@@ -31,7 +31,7 @@ main{
 .contatti{
    width: 450px;
    height: 100%;
-   overflow-y: auto;
+   /* overflow-y: auto; */
    border: 1px solid #999;
 }
 .chat{
@@ -79,6 +79,12 @@ main{
     height: 85px;
     border-bottom: 1px solid #d3d3d3;
     display: flex;
+    cursor: pointer;
+}
+.cont-contatto{
+    width: 100%;
+    height: 660px;
+    overflow-y: scroll;
 }
 .contatto:hover{
     background-color: #ededed;
@@ -274,4 +280,7 @@ main{
     top: 65%;
     font-size: 12px;
     color: #e0e2e2;
+}
+.background-cont{
+    background-color: #646464;
 }

@@ -48,7 +48,9 @@
               <input type="text" id="search-chat" placeholder="      Cerca o inizia una nuova chat">
             </div>
             <!-- lista contatti -->
-            <div class="contatto" v-for="element in contacts">
+            <div class="cont-contatto">
+            <div class="contatto" v-for="(element, index) in contacts"  :class="(index == activeContact ? 'background-cont' : null)" 
+            @click="ViewContact(index)">
               <div class="img-profilo">
                 <img :src="element.avatar" class="img-avatar2">
               </div>
@@ -62,16 +64,17 @@
               </div>
             </div>
           </div>
+          </div>
           <!--  parte a destra -->
           <div class="chat">
             <!-- header -->
             <div class="profilo">
               <div class="img-profilo2">
-                <img src="imgs/avatar_3.jpg" class="img-avatar">
+                <img :src="contacts[activeContact].avatar" class="img-avatar">
               </div>
               <div class="utente">
                 <div class="nome font">
-                  Luca
+                  {{contacts[activeContact].name}}
                 </div>
                 <div class="ultimo-accesso">
                   Ultimo accesso oggi alle 11:00
@@ -86,26 +89,12 @@
              <!-- messaggi -->
             <div class="container-messaggi">
                <div class="inner-container">
-                <div class="mess-utente ">
-                  ciao
+                <div  v-for="(element,index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent') ? 'mess-utente' : 'mess-contatto'">
+                  {{contacts[activeContact].messages[index].message}}
                   <div class="orario">11:10</div>
                 </div>
-              
-                <div class="mess-contatto ">
-                  ciao
-                  <div class="orario">11:10</div>
-                </div>
-
-                <div class="mess-utente ">
-                  ciao
-                  <div class="orario">11:10</div>
-                </div>
-                <div class="mess-utente ">
-                  ciao
-                  <div class="orario">11:10</div>
-                </div>
-              
-               </div>
+         
+              </div>
               
             </div>
             <!-- footer -->
@@ -114,7 +103,7 @@
                 <i class="fa-regular fa-face-smile col-icon"></i>
               </div>
               <div class="text-chat">
-                <input type="text" id="input-chat" placeholder="Scrivi un messaggio">
+                <input type="text" id="input-chat" placeholder="Scrivi un messaggio" v-model="newMessage" @keyUp.enter="sendMessage(activeContact)">
               </div>
               <div class="single-icon">
                 <i class="fa-solid fa-microphone col-icon"></i>

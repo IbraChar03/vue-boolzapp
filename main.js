@@ -5,7 +5,7 @@ const {createApp} = Vue;
     data(){
         return{
           newMessage : "",
-            Contact : 0,
+            activeContact : 0,
             contacts: [
               {
                 name: 'Michele',
@@ -174,12 +174,38 @@ const {createApp} = Vue;
     
     },
     methods:{
-        
-        }
-            
-   }
+        ViewContact(indice){
+           {
+            this.activeContact = indice;
+            return this.activeContact;
+       
+          }
+        },
+        sendMessage(indice){
+          let mess = {
+            date: '10/01/2020 15:51:00',
+            message: this.newMessage,
+            status: "sent"
+          }
+          this.contacts[indice].messages.push(mess);
+          let view=this
+          setTimeout(function(){
+            let messOk = {
+              date: '10/01/2020 15:51:00',
+            message: "ok",
+            status: "received"
+           
+            }
 
-).mount("#app")
+            view.contacts[indice].messages.push(messOk);
+
+          }, 1000);
+          this.newMessage=" "
+        },     
+            
+    }
+
+  }).mount("#app")
 
 
 
