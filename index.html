@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    
+
+    <div id="app">  
+       <header></header>
+       <main>
+        <div class="container">
+          <!-- Parte a sinistra -->
+          <div class="contatti">
+            <div class="profilo">
+              <div class="img-profilo">
+                <img src="imgs/avatar_io.jpg" class="img-avatar">
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-circle-notch col-icon"></i>
+                <i class="fa-solid fa-message col-icon"></i>
+                <i class="fa-solid fa-ellipsis-vertical col-icon"></i>
+              </div>
+            </div>
+            <div class="notifiche">
+              <div class="campanella">
+                <div class="img-bell">
+                  <i class="fa-solid fa-bell-slash bell"></i>
+                </div>
+              </div>
+              <div class="alert-notifiche">
+                <div class="ricevi">
+                  Ricevi notifiche di nuovi messaggi
+                </div>
+                <div class="attiva">
+                  <a href="" id="attiva-notifiche">Attiva notifiche desktop</a>
+                </div>
+              </div>
+              
+            </div>
+            <div class="search">
+              <input type="text" id="search-chat" placeholder="      Cerca o inizia una nuova chat">
+            </div>
+            <!-- lista contatti -->
+            <div class="contatto">
+              <div class="img-profilo">
+                <img src="imgs/avatar_3.jpg" class="img-avatar2">
+              </div>
+              <div class="utente">
+                <div class="nome">
+                  Luca
+                </div>
+                <div class="messaggio">
+                  Ciao
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  parte a destra -->
+          <div class="chat">
+            <!-- header -->
+            <div class="profilo">
+              <div class="img-profilo2">
+                <img src="imgs/avatar_3.jpg" class="img-avatar">
+              </div>
+              <div class="utente">
+                <div class="nome font">
+                  Luca
+                </div>
+                <div class="ultimo-accesso">
+                  Ultimo accesso oggi alle 11:00
+                </div>
+              </div>
+              <div class="icons2">
+                <i class="fa-solid fa-magnifying-glass col-icon"></i>
+                <i class="fa-solid fa-paperclip col-icon"></i>
+                <i class="fa-solid fa-ellipsis-vertical col-icon"></i>
+              </div>
+            </div>
+             <!-- messaggi -->
+            <div class="container-messaggi">
+               <div class="inner-container">
+                <div class="mess-utente ">
+                  ciao
+                  <div class="orario">11:10</div>
+                </div>
+              
+                <div class="mess-contatto ">
+                  ciao
+                  <div class="orario">11:10</div>
+                </div>
+
+                <div class="mess-utente ">
+                  ciao
+                  <div class="orario">11:10</div>
+                </div>
+                <div class="mess-utente ">
+                  ciao
+                  <div class="orario">11:10</div>
+                </div>
+              
+               </div>
+              
+            </div>
+            <!-- footer -->
+            <div class="input-messaggio">
+              <div class="single-icon">
+                <i class="fa-regular fa-face-smile col-icon"></i>
+              </div>
+              <div class="text-chat">
+                <input type="text" id="input-chat" placeholder="Scrivi un messaggio">
+              </div>
+              <div class="single-icon">
+                <i class="fa-solid fa-microphone col-icon"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+       </main>
+        
+    </div>
+        
+    
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

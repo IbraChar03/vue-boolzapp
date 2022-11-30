@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #009688 ;
+}
+main{
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #dadbd4 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    bottom: 50px; 
+    width: 75%;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+}
+.contatti{
+   width: 450px;
+   height: 100%;
+   
+   border: 1px solid #999;
+}
+.chat{
+    width: calc(100% - 450px);
+    height: 100%;
+    border: 1px solid #999;
+    background-image: url(imgs/mine.jpg);
+    position: relative;
+}
+.profilo{
+    width: 100%;
+    height: 60px;
+    border: 1px solid #999; 
+    display: flex;
+    position: relative;
+    background-color: #ededed;
+}
+.notifiche{
+    width: 100%;
+    height: 85px;
+    background-color: #8edafc;
+    display: flex;
+    
+}
+.search{
+    width: 100%;
+    height: 55px;
+    padding: 9px;
+    background-color: #f9f9f9;
+    
+}
+#search-chat{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    padding: 9px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  
+}
+.contatto{
+    width: 100%;
+    height: 85px;
+    border-bottom: 1px solid #d3d3d3;
+    display: flex;
+}
+.contatto:hover{
+    background-color: #ededed;
+}
+.img-profilo{
+    width: 15%;
+    height: 100%;
+    /* background-color: #8edafc; */
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+.utente{
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+}
+.nome{
+    width: 100%;
+    height: 40%;
+    font-weight: bold;
+    font-size: 18px;
+}
+.messaggio{
+    width: 100%;
+    height: 60%;
+    color: #999;
+    margin-top: 5px;
+}
+.campanella{
+    width: 15%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+.alert-notifiche{
+    width: 80%;
+    height: 100%;
+    padding-top: 15px;
+}
+.ricevi{
+    width: 100%;
+    height: 40%;
+    color: #646464;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.attiva{
+    width: 100%;
+    height: 60%;
+}
+#attiva-notifiche{
+    color: #999;
+    font-size: 17px;
+    
+}
+.img-bell{
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bell{
+    color:#9de1fe;
+    font-size: 20px;
+    
+}
+.icons{ 
+    width: 30%;
+    height: 100%;
+    /* background-color: chartreuse; */
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col-icon{
+    color: #808080;
+    font-size: 20px;
+}
+.img-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: contain;
+}
+.img-avatar2{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: contain;
+}
+.icons2{ 
+    width: 15%;
+    height: 100%;
+    /* background-color: chartreuse; */
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.img-profilo2{
+    width: 5%;
+    height: 100%;
+    /* background-color: #8edafc; */
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+.ultimo-accesso{
+    width: 100%;
+    height: 60%;
+    color: #999;
+    font-size: 12px;
+    
+}
+.font{
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+.input-messaggio{
+    height: 60px;
+    width: 100%;
+    background-color: #ededed;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: 8px;
+}
+.single-icon{
+    width: 10%;
+    /* background-color: blue; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-chat{
+    width: 90%;
+    height: 100%;
+}
+#input-chat{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    padding: 9px;
+}
+.container-messaggi{
+    width: 100%;
+    height: calc(100% - 120px);
+     /* background-color: #808080;  */
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px 30px;
+}
+ .inner-container{
+    padding-top: 50px;
+    width: 70%;
+    height: 100%;
+     /* background-color: bisque;  */
+   
+} 
+.mess-utente{
+   position: relative;
+   left: 61.5%;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #d5f9ba;
+    margin-bottom: 20px;
+}
+.mess-contatto{
+    position: relative;
+    width: 250px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.orario{
+    position: absolute;
+    left: 85%;
+    top: 65%;
+    font-size: 12px;
+    color: #e0e2e2;
+}
