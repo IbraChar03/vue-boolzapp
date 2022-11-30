@@ -201,7 +201,12 @@ const {createApp} = Vue;
 
           }, 1000);
           this.newMessage=" "
-        },     
+        },   
+        last(element){
+          let dd=element.messages.length-1
+          let aa=dd.message
+
+        }  
             
     }
 

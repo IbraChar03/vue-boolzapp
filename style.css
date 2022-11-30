@@ -83,7 +83,7 @@ main{
 }
 .cont-contatto{
     width: 100%;
-    height: 660px;
+    height: calc(100% - 200px);
     overflow-y: scroll;
 }
 .contatto:hover{
