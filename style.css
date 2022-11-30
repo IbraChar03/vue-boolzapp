@@ -31,7 +31,7 @@ main{
 .contatti{
    width: 450px;
    height: 100%;
-   
+   overflow-y: auto;
    border: 1px solid #999;
 }
 .chat{
