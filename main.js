@@ -177,7 +177,6 @@ const {createApp} = Vue;
         ViewContact(indice){
            {
             this.activeContact = indice;
-            return this.activeContact;
        
           }
         },
@@ -202,7 +201,7 @@ const {createApp} = Vue;
           }, 1000);
           this.newMessage=" "
         },   
-            
+               
     }
 
   }).mount("#app")

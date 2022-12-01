@@ -45,11 +45,11 @@
               
             </div>
             <div class="search">
-              <input type="text" id="search-chat" placeholder="      Cerca o inizia una nuova chat">
+              <input type="text" id="search-chat" placeholder="Cerca o inizia una nuova chat">
             </div>
             <!-- lista contatti -->
             <div class="cont-contatto">
-            <div class="contatto" v-for="(element, index) in contacts"  :class="(index == activeContact ? 'background-cont' : null)" 
+            <div class="contatto" v-for="(element, index) in contacts"  :class="index == ActiveContact ? 'background-cont' : ``" 
             @click="ViewContact(index)">
               <div class="img-profilo">
                 <img :src="element.avatar" class="img-avatar2">
