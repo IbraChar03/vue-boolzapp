@@ -202,8 +202,8 @@ const {createApp} = Vue;
           }, 1000);
           this.newMessage=" "
         },   
-        delete(indice){
-            this.contacts[indice].messages.splice(0, 1);
+        deleteMessage(index,ind){
+            this.contacts[index].messages.splice(ind, 1);
           
         },
                

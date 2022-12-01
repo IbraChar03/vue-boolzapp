@@ -267,6 +267,7 @@ main{
     border-radius: 10px;
     background-color: #d5f9ba;
     margin-bottom: 20px;
+    word-break: break-word;
 }
 .mess-contatto{
     position: relative;
@@ -275,6 +276,7 @@ main{
     padding: 15px;
     background-color: #fff;
     margin-bottom: 15px;
+    word-break: break-word;
 }
 .orario{
     position: absolute;
@@ -297,7 +299,7 @@ main{
     cursor: pointer;
     display: none;
   }
-  
+
 .dropbtn2 {
     color: #808080;
     font-size: 13px;
