@@ -297,6 +297,7 @@ main{
     cursor: pointer;
     display: none;
   }
+  
 .dropbtn2 {
     color: #808080;
     font-size: 13px;
@@ -308,7 +309,6 @@ main{
     display: none;
   }
   
- 
   .dropdown {
      position: relative; 
     display: block;
@@ -320,8 +320,6 @@ main{
     display: block;
   }
 
-  
- 
   .dropdown-content {
     display: none;
     position: absolute;

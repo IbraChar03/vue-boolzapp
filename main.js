@@ -203,7 +203,9 @@ const {createApp} = Vue;
           this.newMessage=" "
         },   
         delete(indice){
-           this.contacts[indice].messages.splice(0, 1);
+           let x= document.getElementById("drp2")
+           x.style.color="red"
+        //    this.contacts[indice].messages.splice(0, 1);
           
         },
                
