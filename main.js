@@ -187,7 +187,7 @@ const {createApp} = Vue;
             status: "sent"
           }
           this.contacts[indice].messages.push(mess);
-          let view=this
+           let view = this
           setTimeout(function(){
             let messOk = {
               date: '10/01/2020 15:51:00',
@@ -201,6 +201,10 @@ const {createApp} = Vue;
           }, 1000);
           this.newMessage=" "
         },   
+        delete(indice){
+           this.contacts[indice].messages.splice(0, 1);
+          
+        }
                
     }
 

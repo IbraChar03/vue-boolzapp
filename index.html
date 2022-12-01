@@ -49,7 +49,7 @@
             </div>
             <!-- lista contatti -->
             <div class="cont-contatto">
-            <div class="contatto" v-for="(element, index) in contacts"  :class="index == ActiveContact ? 'background-cont' : ``" 
+            <div class="contatto" v-for="(element, index) in contacts"  :class="index == activeContact ? 'background-cont' : ``" 
             @click="ViewContact(index)">
               <div class="img-profilo">
                 <img :src="element.avatar" class="img-avatar2">
@@ -87,14 +87,22 @@
               </div>
             </div>
              <!-- messaggi -->
-            <div class="container-messaggi">
-               <div class="inner-container">
-                <div  v-for="(element,index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent') ? 'mess-utente' : 'mess-contatto'">
-                  {{contacts[activeContact].messages[index].message}}
-                  <div class="orario">11:10</div>
-                </div>
-         
-              </div>
+             <div class="container-messaggi">
+              <div class="inner-container">
+               <div class="flex" v-for="(element,index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent') ? 'mess-utente' : 'mess-contatto'">
+                 {{contacts[activeContact].messages[index].message}}
+                 <div class="orario">11:10</div> 
+                 <div class="dropdown">
+                 <button :class="(contacts[activeContact].messages[index].status == 'sent') ? 'dropbtn' : 'dropbtn2'">
+                   <i class="fa-solid fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content" >
+                   <div class="drp">Message info</div>
+                   <div id="drp2" v-on:change="delete(index)">Delete Message</div>
+                 </div>
+                 </div>
+               </div>
+             
               
             </div>
             <!-- footer -->
