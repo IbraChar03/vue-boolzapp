@@ -292,25 +292,25 @@ main{
     font-size: 13px;
     border: none;
     background-color: #d5f9ba ;
-    position: absolute;
-    right: 5%;
+    position: relative;
+    right: -5px;
     cursor: pointer;
     display: none;
   }
-  .dropbtn2 {
+.dropbtn2 {
     color: #808080;
     font-size: 13px;
     border: none;
     background-color: white ;
-    position: absolute;
-    right: 5%;
+    position: relative;
+    right: -10px;
     cursor: pointer;
     display: none;
   }
   
  
   .dropdown {
-    /* position: relative; */
+     position: relative; 
     display: block;
   }
   .flex:hover .dropbtn{
