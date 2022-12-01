@@ -45,11 +45,11 @@
               
             </div>
             <div class="search">
-              <input type="text" id="search-chat" placeholder="Cerca o inizia una nuova chat">
+              <input type="text" id="search-chat" placeholder="Cerca o inizia una nuova chat" v-model="research">
             </div>
             <!-- lista contatti -->
             <div class="cont-contatto">
-            <div class="contatto" v-for="(element, index) in contacts"  :class="index == activeContact ? 'background-cont' : ``" 
+            <div class="contatto" v-for="(element, index) in searchInput"  :class="index == activeContact ? 'background-cont' : ``" 
             @click="ViewContact(index)">
               <div class="img-profilo">
                 <img :src="element.avatar" class="img-avatar2">
@@ -59,7 +59,7 @@
                   {{element.name}}
                 </div>
                 <div class="messaggio">
-                  {{element.messages[element.messages.length-1].message}}
+                  <!-- {{element.messages[element.messages.length-1].message}} -->
                 </div>
               </div>
             </div>

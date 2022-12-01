@@ -4,6 +4,7 @@ const {createApp} = Vue;
 
     data(){
         return{
+            research : null,
           newMessage : "",
             activeContact : 0,
             contacts: [
@@ -204,8 +205,19 @@ const {createApp} = Vue;
         delete(indice){
            this.contacts[indice].messages.splice(0, 1);
           
-        }
+        },
                
+    },
+    computed:{
+        searchInput(){
+            if(this.research){
+                return this.contacts.filter((item)=>{
+                  return this.research.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
+                })
+                }else{
+                  return this.contacts;
+                }
+        }
     }
 
   }).mount("#app")
