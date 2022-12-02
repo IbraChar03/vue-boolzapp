@@ -1,5 +1,6 @@
 const {createApp} = Vue;
 
+
  createApp({
 
     data(){
@@ -14,7 +15,7 @@ const {createApp} = Vue;
                 visible: true,
                 messages: [
                       {
-                          date: '10/01/2020 15:30:55',
+                          date: '10/01/2020 15:50:00',
                           message: 'Hai portato a spasso il cane?',
                           status: 'sent'
                       },
@@ -187,12 +188,14 @@ const {createApp} = Vue;
             message: this.newMessage,
             status: "sent"
           }
-          if(/^[A-Za-z0-9]*$/.test(this.newMessage)){
-            this.contacts[indice].messages.push(mess);
-          }
+
+           if(/[0-9]/.test(this.newMessage) || /[a-zA-Z]/.test(this.newMessage)){
+             this.contacts[indice].messages.push(mess);
+           }
+        
           
           let newMess=this.newMessage
-           let view = this
+          let view = this
           setTimeout(function(){
             let messOk = {
               date: '10/01/2020 15:51:00',
@@ -200,9 +203,13 @@ const {createApp} = Vue;
             status: "received"
            
             }
-            if(/^[A-Za-z0-9]*$/.test(newMess)){
+           
+             if(/[0-9]/.test(newMess) || /[a-zA-Z]/.test(newMess)){
                 view.contacts[indice].messages.push(messOk);
-              }
+            }
+            
+            
+              
           
 
           }, 1000);
@@ -220,16 +227,15 @@ const {createApp} = Vue;
             else{
                 return false;
             }
-        }
-           
+        },
+      
     },
   
 
   }).mount("#app")
 
 
-
-
+  
 
 
 

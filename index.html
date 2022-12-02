@@ -93,7 +93,7 @@
               <div class="inner-container">
                <div class="flex" v-for="(element,index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent') ? 'mess-utente' : 'mess-contatto'">
                  {{contacts[activeContact].messages[index].message}}
-                 <div class="orario">11:10</div> 
+                 <div class="orario">{{contacts[activeContact].messages[index].date}}</div> 
                  <div class="dropdown">
                  <button :class="(contacts[activeContact].messages[index].status == 'sent') ? 'dropbtn' : 'dropbtn2'">
                    <i class="fa-solid fa-caret-down"></i>
