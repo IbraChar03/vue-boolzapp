@@ -184,13 +184,14 @@ const {createApp} = Vue;
           }
         },
         sendMessage(active,ind){
+            var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
           let mess = {
             date: "15:23",
             message: this.newMessage,
             status: "sent"
           }
 
-           if(/[0-9]/.test(this.newMessage) || /[a-zA-Z]/.test(this.newMessage)){
+           if(/[0-9]/.test(this.newMessage) || /[a-zA-Z]/.test(this.newMessage) || format.test(this.newMessage)){
              this.contacts[active].messages.push(mess);
            }
         
@@ -205,7 +206,7 @@ const {createApp} = Vue;
            
             }
            
-             if(/[0-9]/.test(newMess) || /[a-zA-Z]/.test(newMess)){
+             if(/[0-9]/.test(newMess) || /[a-zA-Z]/.test(newMess) || format.test(newMess)){
                 view.contacts[active].messages.push(messOk);
             }
             view.contacts[active].messages[view.contacts[active].messages.length-1].date = today
