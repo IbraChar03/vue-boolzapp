@@ -284,12 +284,12 @@ const {createApp} = Vue;
             inputMess.style.backgroundColor="#1f2c34"
             let inputChat = document.getElementById("input-chat")
             inputChat.style.backgroundColor="#2b3942"
+            inputChat.style.color="#fff"
             inputChat.style.border="none"
 
             let messContatto = document.getElementsByClassName("mess-contatto")
             for (let index = 0; index < messContatto.length; index++) {
-                messContatto[index].style.backgroundColor="#1f2c34"
-                messContatto[index].style.color="#fff"
+                messContatto[index].style.color="black"
                 
             }
 
@@ -302,8 +302,7 @@ const {createApp} = Vue;
 
             let messUser = document.getElementsByClassName("mess-utente")
             for (let index = 0; index < messUser.length; index++) {
-                messUser[index].style.backgroundColor="#005e4a"
-                messUser[index].style.color="#fff"
+                messUser[index].style.color="black"
                 
             }
 
