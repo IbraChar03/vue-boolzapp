@@ -294,8 +294,7 @@ main{
     font-size: 13px;
     border: none;
     background-color: #d5f9ba ;
-    position: relative;
-    right: -5px;
+    margin-left: 30px;
     cursor: pointer;
     display: none;
   }
@@ -305,15 +304,15 @@ main{
     font-size: 13px;
     border: none;
     background-color: white ;
-    position: relative;
-    right: -10px;
+    margin-left: 130px;
     cursor: pointer;
     display: none;
   }
   
   .dropdown {
-     position: relative; 
+     position: absolute; 
     display: block;
+    right: 3%;
   }
   .flex:hover .dropbtn{
     display: block;
@@ -351,6 +350,5 @@ main{
     cursor: pointer;
   }
   .flex{
-    position: relative;
     display: flex;
   }

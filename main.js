@@ -187,7 +187,11 @@ const {createApp} = Vue;
             message: this.newMessage,
             status: "sent"
           }
-          this.contacts[indice].messages.push(mess);
+          if(/^[A-Za-z0-9]*$/.test(this.newMessage)){
+            this.contacts[indice].messages.push(mess);
+          }
+          
+          let newMess=this.newMessage
            let view = this
           setTimeout(function(){
             let messOk = {
@@ -196,8 +200,10 @@ const {createApp} = Vue;
             status: "received"
            
             }
-
-            view.contacts[indice].messages.push(messOk);
+            if(/^[A-Za-z0-9]*$/.test(newMess)){
+                view.contacts[indice].messages.push(messOk);
+              }
+          
 
           }, 1000);
           this.newMessage=" "
