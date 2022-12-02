@@ -116,17 +116,17 @@ const {createApp} = Vue;
                 visible: true,
                 messages: [
                       {
-                          date: '10/01/2020 15:30:55',
+                          date: ' 15:30',
                           message: 'Ciao Claudia, hai novità?',
                           status: 'sent'
                       },
                       {
-                          date: '10/01/2020 15:50:00',
+                          date: '15:50',
                           message: 'Non ancora',
                           status: 'received'
                       },
                       {
-                          date: '10/01/2020 15:51:00',
+                          date: '15:51',
                           message: 'Nessuna nuova, buona nuova',
                           status: 'sent'
                       }
@@ -238,6 +238,93 @@ const {createApp} = Vue;
             var elements = document.getElementsByClassName("dropdown-content");          
             elements[index].classList.toggle("block")
 
+        },
+        darkMode(){
+            let main = document.querySelector("main");
+            main.style.backgroundColor="#121b22";
+
+            let header = document.querySelector("header");
+            header.style.backgroundColor="#091d1d";
+
+            let profilo = document.getElementsByClassName("profilo");
+          for (let index = 0; index < profilo.length; index++) {
+            profilo[index].style.backgroundColor="#1f2c34";
+            profilo[index].style.border="none";
+            
+          }
+
+            let notifiche = document.querySelector(".notifiche");
+            notifiche.style.backgroundColor="#182329";
+
+            let bell = document.querySelector(".bell");
+            bell.style.color="#221b29";
+
+            let ricevi = document.querySelector(".ricevi");
+            ricevi.style.color="#fff";
+
+            let imgbell = document.querySelector(".img-bell");
+            imgbell.style.backgroundColor="#50c0ec";
+
+            let search = document.querySelector(".search");
+            search.style.backgroundColor="#121b22";
+
+            let inputSearch = document.getElementById("search-chat");
+            inputSearch.style.backgroundColor="#1f2c34";
+            inputSearch.style.border="none";
+
+            let contatto = document.getElementsByClassName("contatto")
+            for (let index = 0; index < contatto.length; index++) {
+                contatto[index].style.backgroundColor="#121b22"
+                
+            }
+            let chatBackground = document.querySelector(".chat")
+            chatBackground.style.backgroundImage = "url(imgs/bool.png)"
+
+            let inputMess = document.querySelector(".input-messaggio")
+            inputMess.style.backgroundColor="#1f2c34"
+            let inputChat = document.getElementById("input-chat")
+            inputChat.style.backgroundColor="#2b3942"
+            inputChat.style.border="none"
+
+            let messContatto = document.getElementsByClassName("mess-contatto")
+            for (let index = 0; index < messContatto.length; index++) {
+                messContatto[index].style.backgroundColor="#1f2c34"
+                messContatto[index].style.color="#fff"
+                
+            }
+
+            let nomeCont = document.getElementsByClassName("nome")
+            for (let index = 0; index < nomeCont.length; index++) {
+                nomeCont[index].style.color="#fff"
+                
+            }
+
+
+            let messUser = document.getElementsByClassName("mess-utente")
+            for (let index = 0; index < messUser.length; index++) {
+                messUser[index].style.backgroundColor="#005e4a"
+                messUser[index].style.color="#fff"
+                
+            }
+
+            let dropdown = document.getElementsByClassName("dropbtn")
+            for (let index = 0; index < dropdown.length; index++) {
+                dropdown[index].style.backgroundColor="#005e4a"
+               
+                
+            }
+
+            let dropdown2 = document.getElementsByClassName("dropbtn2")
+            for (let index = 0; index < dropdown2.length; index++) {
+                dropdown2[index].style.backgroundColor="#1f2c34"
+               
+                
+            }
+            
+                
+            
+                
+           
         }
       
     },
