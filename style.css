@@ -309,6 +309,9 @@ main{
     cursor: pointer;
     display: none;
   }
+  .font-angle{
+    font-size: 17px;
+  }
   
   .dropdown {
      position: absolute; 
