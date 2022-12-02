@@ -221,20 +221,9 @@ const {createApp} = Vue;
                 return false;
             }
         }
-
-               
+           
     },
-    // computed:{
-    //     searchInput(){
-    //         if(this.research){
-    //             return this.contacts.filter((item)=>{
-    //               return this.research.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
-    //             })
-    //             }else{
-    //               return this.contacts;
-    //             }
-    //     }
-    // }
+  
 
   }).mount("#app")
 
