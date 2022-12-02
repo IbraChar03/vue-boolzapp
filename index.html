@@ -49,9 +49,9 @@
             </div>
             <!-- lista contatti -->
             <div class="cont-contatto">
-             
+            <template v-for="(element, index) in contacts"> 
             <div class="contatto"  :class="index == activeContact ? 'background-cont' : ``" 
-            @click="ViewContact(index)"  v-for="(element, index) in searchInput">
+            @click="ViewContact(index)" v-if="searchCont(index)">
               <div class="img-profilo">
                 <img :src="element.avatar" class="img-avatar2">
               </div>
@@ -64,6 +64,7 @@
                 </div>
               </div>
             </div> 
+          </template>
           </div>
           </div>
           <!--  parte a destra -->

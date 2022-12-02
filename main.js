@@ -4,7 +4,7 @@ const {createApp} = Vue;
 
     data(){
         return{
-            research : null,
+            research : "",
           newMessage : "",
             activeContact : 0,
             contacts: [
@@ -212,19 +212,29 @@ const {createApp} = Vue;
             this.contacts[active].messages.splice(index, 1);
           
         },
+        searchCont(index){
+            nome=this.contacts[index].name.toLowerCase();
+            if(nome.includes(this.research)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
                
     },
-    computed:{
-        searchInput(){
-            if(this.research){
-                return this.contacts.filter((item)=>{
-                  return this.research.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
-                })
-                }else{
-                  return this.contacts;
-                }
-        }
-    }
+    // computed:{
+    //     searchInput(){
+    //         if(this.research){
+    //             return this.contacts.filter((item)=>{
+    //               return this.research.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
+    //             })
+    //             }else{
+    //               return this.contacts;
+    //             }
+    //     }
+    // }
 
   }).mount("#app")
 
