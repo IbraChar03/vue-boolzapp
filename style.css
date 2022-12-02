@@ -283,7 +283,8 @@ main{
     left: 85%;
     top: 65%;
     font-size: 12px;
-    color: #e0e2e2;
+   /* color: #d9dde3;  */
+    color: #808080;
 }
 .background-cont{
     background-color: #646464;
