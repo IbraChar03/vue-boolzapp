@@ -1,6 +1,7 @@
 const {createApp} = Vue;
 
 
+
  createApp({
 
     data(){
@@ -15,17 +16,17 @@ const {createApp} = Vue;
                 visible: true,
                 messages: [
                       {
-                          date: '10/01/2020 15:50:00',
+                          date: '20/03/2020 16:30:55',
                           message: 'Hai portato a spasso il cane?',
                           status: 'sent'
                       },
                       {
-                          date: '10/01/2020 15:50:00',
+                          date: '20/03/2020 16:30:55',
                           message: 'Ricordati di stendere i panni',
                           status: 'sent'
                       },
                       {
-                          date: '10/01/2020 16:15:22',
+                          date: '20/03/2020 16:30:55',
                           message: 'Tutto fatto!',
                           status: 'received'
                       }
@@ -37,7 +38,7 @@ const {createApp} = Vue;
                 visible: true,
                 messages: [
                       {
-                          date: '20/03/2020 16:30:00',
+                          date: '20/03/2020 16:30:55',
                           message: 'Ciao come stai?',
                           status: 'sent'
                       },
@@ -182,7 +183,7 @@ const {createApp} = Vue;
        
           }
         },
-        sendMessage(indice){
+        sendMessage(active,ind){
           let mess = {
             date: '10/01/2020 15:51:00',
             message: this.newMessage,
@@ -190,7 +191,7 @@ const {createApp} = Vue;
           }
 
            if(/[0-9]/.test(this.newMessage) || /[a-zA-Z]/.test(this.newMessage)){
-             this.contacts[indice].messages.push(mess);
+             this.contacts[active].messages.push(mess);
            }
         
           
@@ -205,14 +206,18 @@ const {createApp} = Vue;
             }
            
              if(/[0-9]/.test(newMess) || /[a-zA-Z]/.test(newMess)){
-                view.contacts[indice].messages.push(messOk);
+                view.contacts[active].messages.push(messOk);
             }
             
-            
-              
-          
-
           }, 1000);
+
+          var today = new Date();
+          var hh = today.getHours();
+          var mm = today.getMinutes();
+          today = hh + ':' + mm;
+          this.contacts[active].messages[this.contacts[active].messages.length-1].date = today
+          console.log(today)
+
           this.newMessage=" "
         },   
         deleteMessage(active,index){
@@ -228,6 +233,11 @@ const {createApp} = Vue;
                 return false;
             }
         },
+        dropDownClick(index){
+            var elements = document.getElementsByClassName("dropdown-content");          
+            elements[index].classList.toggle("block")
+
+        }
       
     },
   

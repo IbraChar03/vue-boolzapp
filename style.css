@@ -295,8 +295,8 @@ main{
     border: none;
     background-color: #d5f9ba ;
     margin-left: 30px;
-    cursor: pointer;
-    display: none;
+    cursor: pointer;  
+    display: none;  
   }
 
 .dropbtn2 {
@@ -319,7 +319,7 @@ main{
   }
   .flex:hover .dropbtn2{
     display: block;
-  }
+  }  
 
   .dropdown-content {
     display: none;
@@ -340,7 +340,7 @@ main{
   
   .dropdown-content a:hover {background-color: #ddd;}
   
-  .dropdown:hover .dropdown-content {display: block;}
+  /* .dropdown:hover .dropdown-content {display: block;} */
   .drp{
     cursor: pointer;
   }
@@ -349,4 +349,7 @@ main{
   }
   .flex{
     display: flex;
+  }
+  .block{
+    display: block;
   }

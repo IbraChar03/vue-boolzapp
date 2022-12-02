@@ -94,7 +94,7 @@
                <div class="flex" v-for="(element,index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent') ? 'mess-utente' : 'mess-contatto'">
                  {{contacts[activeContact].messages[index].message}}
                  <div class="orario">{{contacts[activeContact].messages[index].date}}</div> 
-                 <div class="dropdown">
+                 <div class="dropdown" @click="dropDownClick(index)">
                  <button :class="(contacts[activeContact].messages[index].status == 'sent') ? 'dropbtn' : 'dropbtn2'">
                    <i class="fa-solid fa-caret-down"></i>
                  </button>
@@ -113,7 +113,7 @@
                 <i class="fa-regular fa-face-smile col-icon"></i>
               </div>
               <div class="text-chat">
-                <input type="text" id="input-chat" placeholder="Scrivi un messaggio" v-model="newMessage" @keyUp.enter="sendMessage(activeContact)">
+                <input type="text" id="input-chat" placeholder="Scrivi un messaggio" v-model="newMessage" @keyUp.enter="sendMessage(activeContact,index)">
               </div>
               <div class="single-icon">
                 <i class="fa-solid fa-microphone col-icon"></i>
